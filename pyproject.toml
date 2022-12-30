@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "ngram_suggester"
+version = "0.1.0"
+description = ""
+authors = ["Real_Marshal <remarshal@protonmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+cli = "ngram_suggester.cli:main"
+train = "ngram_suggester.train:cli"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+nltk = "^3.8"
+dill = "^0.3.6"
+questionary = "^1.10.0"
+prompt-toolkit = "^3.0.36"
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
